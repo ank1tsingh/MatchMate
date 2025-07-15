@@ -9,6 +9,8 @@ import CoreData
 
 struct PersistenceController {
     static let shared = PersistenceController()
+    
+    let container: NSPersistentContainer
 
     @MainActor
     static let preview: PersistenceController = {
@@ -16,7 +18,7 @@ struct PersistenceController {
         let viewContext = result.container.viewContext
         for _ in 0..<10 {
             let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+//            newItem.timestamp = Date()
         }
         do {
             try viewContext.save()
@@ -28,8 +30,6 @@ struct PersistenceController {
         }
         return result
     }()
-
-    let container: NSPersistentContainer
 
     init(inMemory: Bool = false) {
         container = NSPersistentContainer(name: "MatchMate")
@@ -54,4 +54,16 @@ struct PersistenceController {
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
+    
+    func save() {
+            let context = container.viewContext
+            
+            if context.hasChanges {
+                do {
+                    try context.save()
+                } catch {
+                    print("Failed to save context: \(error)")
+                }
+            }
+        }
 }

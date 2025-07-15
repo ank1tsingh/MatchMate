@@ -35,7 +35,6 @@ enum MatchStatus: String, CaseIterable, Codable {
     }
 }
 
-// MARK: - MatchUser.swift (Domain Entity)
 struct MatchUser: Identifiable, Equatable {
     let id: String
     let name: String
@@ -45,8 +44,7 @@ struct MatchUser: Identifiable, Equatable {
     let email: String
     let phone: String
     var matchStatus: MatchStatus
-    
-    // Convert from API User model
+
     init(from user: User, status: MatchStatus = .pending) {
         self.id = user.userId
         self.name = user.name.fullName
@@ -58,7 +56,6 @@ struct MatchUser: Identifiable, Equatable {
         self.matchStatus = status
     }
     
-    // For Core Data conversion
     init(id: String, name: String, age: Int, location: String,
          profileImageURL: String, email: String, phone: String,
          matchStatus: MatchStatus) {
