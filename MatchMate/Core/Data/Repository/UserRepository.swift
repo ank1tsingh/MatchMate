@@ -23,21 +23,16 @@ class UserRepository: UserRepositoryProtocol {
             .map { users in
                 users.map { MatchUser(from: $0) }
             }
+            .mapError{ apiError in
+                RepositoryError.apiError(apiError) as Error
+            }
             .flatMap { [weak self] matchUsers -> AnyPublisher<[MatchUser], Error> in
                 guard let self = self else {
                     return Just(matchUsers).setFailureType(to: Error.self).eraseToAnyPublisher()
                 }
-                
-                // Save to local database
                 return self.saveUsers(matchUsers)
                     .map { matchUsers }
                     .eraseToAnyPublisher()
-            }
-            .mapError { error in
-                if let apiError = error as? APIError {
-                    return RepositoryError.apiError(apiError)
-                }
-                return RepositoryError.unknownError(error)
             }
             .eraseToAnyPublisher()
     }

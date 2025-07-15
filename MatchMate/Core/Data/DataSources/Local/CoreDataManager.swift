@@ -138,7 +138,6 @@ class CoreDataManager: CoreDataManagerProtocol {
     }
 }
 
-// MARK: - CoreDataError.swift
 enum CoreDataError: Error {
     case userNotFound
     case saveFailed

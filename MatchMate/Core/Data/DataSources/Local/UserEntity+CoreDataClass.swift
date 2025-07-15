@@ -43,11 +43,6 @@ public class UserEntity: NSManagedObject {
     }
 }
 
-// MARK: - UserEntity+CoreDataProperties.swift
-
-import CoreData
-import Foundation
-
 extension UserEntity {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<UserEntity> {
         return NSFetchRequest<UserEntity>(entityName: "UserEntity")

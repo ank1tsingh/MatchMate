@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23788.4" systemVersion="24F74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="age" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="email" optional="YES" attributeType="String"/>
+    <entity name="UserEntity" representedClassName="UserEntity" syncable="YES">
+        <attribute name="age" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="email" attributeType="String"/>
         <attribute name="lastUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="location" optional="YES" attributeType="String"/>
-        <attribute name="matchStatus" optional="YES" attributeType="String"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="phone" optional="YES" attributeType="String"/>
-        <attribute name="profileImageURL" optional="YES" attributeType="String"/>
-        <attribute name="userID" optional="YES" attributeType="String"/>
+        <attribute name="location" attributeType="String"/>
+        <attribute name="matchStatus" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="phone" attributeType="String"/>
+        <attribute name="profileImageURL" attributeType="String"/>
+        <attribute name="userID" attributeType="String"/>
     </entity>
 </model>

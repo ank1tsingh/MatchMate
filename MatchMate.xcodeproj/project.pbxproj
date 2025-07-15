@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BC6EACBF2E26C78E007D9BF6 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BC6EACBE2E26C78E007D9BF6 /* SDWebImageSwiftUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		BC6EAC562E265220007D9BF6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC6EACBF2E26C78E007D9BF6 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = MatchMate;
 			packageProductDependencies = (
+				BC6EACBE2E26C78E007D9BF6 /* SDWebImageSwiftUI */,
 			);
 			productName = MatchMate;
 			productReference = BC6EAC432E26521F007D9BF6 /* MatchMate.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = BC6EAC3A2E26521F007D9BF6;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BC6EACBD2E26C78E007D9BF6 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BC6EAC442E26521F007D9BF6 /* Products */;
 			projectDirPath = "";
@@ -550,6 +559,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BC6EACBD2E26C78E007D9BF6 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = exactVersion;
+				version = 3.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BC6EACBE2E26C78E007D9BF6 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC6EACBD2E26C78E007D9BF6 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BC6EAC3B2E26521F007D9BF6 /* Project object */;
 }

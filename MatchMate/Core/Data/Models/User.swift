@@ -21,7 +21,6 @@ struct User: Codable, Identifiable {
     let picture: Picture
     let nat: String
     
-    // for Core Data compatibility
     var userId: String {
         return login.uuid
     }
@@ -85,7 +84,6 @@ struct Location: Codable {
         self.coordinates = try container.decode(Coordinates.self, forKey: .coordinates)
         self.timezone = try container.decode(Timezone.self, forKey: .timezone)
         
-        // Handle postcode as either String or Int
         if let postcodeInt = try? container.decode(Int.self, forKey: .postcode) {
             self.postcode = .integer(postcodeInt)
         } else if let postcodeString = try? container.decode(String.self, forKey: .postcode) {
