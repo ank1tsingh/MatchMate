@@ -3,8 +3,8 @@
 A modern iOS matrimonial app built with **SwiftUI** and **MVVM Clean Architecture**, featuring profile cards with accept/decline functionality and full offline support.
 ## ✨ Features
 
-- **SwiftUI Profile Cards** - Beautiful, responsive cards with user photos and info
-- **Accept/Decline Actions** - Instant feedback with smooth animations
+- **SwiftUI Profile Cards** - Cards with user photos and info
+- **Accept/Decline Actions** - Button with smooth animations
 - **API Integration** - Fetches profiles from RandomUser API
 - **Offline Mode** - Full functionality without internet connection
 - **Reactive Programming** - Combine framework for data flow
